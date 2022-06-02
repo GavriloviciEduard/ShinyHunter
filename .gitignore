@@ -1,0 +1,8 @@
+env/
+__pycache__/
+.pytest_cache/
+.vscode/**/*
+!.vscode/settings.json
+htmlcov/
+.coverage
+*.log

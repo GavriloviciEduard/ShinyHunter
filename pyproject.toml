@@ -1,0 +1,23 @@
+[tool.black]
+line-length = 120
+
+[tool.poetry]
+name = "shiny-hunter"
+version = "0.0.1"
+description = "Pokemon shiny hunting using the gb operator by epilogue"
+authors = ["Gavrilovici Eduard <eddiegavrilovici@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pywin32 = "*"
+pynput = "*"
+pywinauto = "*"
+mss = "*"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+flake8 = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

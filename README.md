@@ -6,4 +6,10 @@
   <br>
 </h1>
 
-<h4 align="center">A minimal shiny hunter app built with <a href="https://www.python.org/" target="_blank">Python</a> for the <a href="https://www.epilogue.co/product/gb-operator" target="_blank">GB Operator.</h4>
+<h4 align="center">A minimal Pokémon shiny hunter app built with <a href="https://www.python.org/" target="_blank">Python</a> for the <a href="https://www.epilogue.co/product/gb-operator" target="_blank">GB Operator</a>.</h4>
+
+<p align="center">
+  <a href="https://github.com/GavriloviciEduard/ShinyHunter/issues">
+    <img src="https://img.shields.io/github/issues/GavriloviciEduard/ShinyHunter">
+  </a>
+</p>

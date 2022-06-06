@@ -38,6 +38,6 @@ class ColorPicker:
 
         pixel = self.window_capture.get_pixel(self.current_x, self.current_y)
         answer = input(f"Save this color{str(pixel)} and position{self.current_x, self.current_y}? ([Y]es/[N]o): ")
-        if answer.lower() == "y" or answer.lower() == "yes":
+        if answer.lower() in ["y", "yes"]:
             return ColorPoint(pixel, (self.current_x, self.current_y))
         return None

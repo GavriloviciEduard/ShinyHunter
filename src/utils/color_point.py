@@ -12,4 +12,4 @@ class ColorPoint:
         return self.color == other.color and self.point == other.point
 
     def __str__(self):
-        return "Color: " + str(self.color) + ", Point: " + str(self.point)
+        return f"Color: {str(self.color)}, Point: {str(self.point)}"

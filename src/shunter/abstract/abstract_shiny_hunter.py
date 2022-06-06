@@ -1,3 +1,5 @@
+import contextlib
+from abc import ABC, abstractmethod
 from datetime import datetime
 
 from pynput import keyboard
@@ -5,7 +7,7 @@ from utils.color_picker import ColorPicker
 from utils.keyboard_simulator import KeyboardSimulator
 
 
-class ShinyHunterBase:
+class AbstractShinyHunter(ABC):
     def __init__(self, window_title: str = "epilogue"):
         self.soft_resets = 0
         self.stop = False
@@ -16,13 +18,15 @@ class ShinyHunterBase:
         self.listener = keyboard.Listener(on_press=self.on_press)
         self.listener.start()
 
+        @abstractmethod
         def _check_shiny(self) -> bool:
             """Check if shiny was found. Abstract method."""
-            pass
+            raise NotImplementedError
 
+        @abstractmethod
         def start_loop(self):
             """Start the loop of the hunter. Abstract method."""
-            pass
+            raise NotImplementedError
 
     def display_current_status(self):
         """Display the current status of the hunter.
@@ -41,9 +45,7 @@ class ShinyHunterBase:
             key (pynput.backend.Key): Keyboard key pressed.
         """
 
-        try:
+        with contextlib.suppress(AttributeError):
             if key.char == "q":
                 print("Exiting...")
                 self.stop = True
-        except AttributeError:
-            pass

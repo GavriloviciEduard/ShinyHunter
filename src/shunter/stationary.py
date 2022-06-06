@@ -1,11 +1,11 @@
 import os
 
-from shunter.base import ShinyHunterBase
+from shunter.abstract.abstract_shiny_hunter import AbstractShinyHunter
 
 
-class ShinyHunterStationary(ShinyHunterBase):
+class ShinyHunterStationary(AbstractShinyHunter):
     def __init__(self, window_title: str = "epilogue"):
-        ShinyHunterBase.__init__(self, window_title)
+        AbstractShinyHunter.__init__(self, window_title)
         self.reference_cp = None
         self.target_cp = None
 

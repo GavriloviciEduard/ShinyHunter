@@ -1,7 +1,7 @@
 import argparse
 
+from shunter.models.shiny_hunter import ShinyHunterType
 from shunter.stationary import ShinyHunterStationary
-from shunter.type import ShinyHunterType
 
 
 def parse_hunter_type() -> ShinyHunterType:

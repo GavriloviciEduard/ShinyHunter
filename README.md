@@ -5,3 +5,5 @@
   ✨ Shiny Hunter ✨
   <br>
 </h1>
+
+<h4 align="center">A minimal shiny hunter app built with <a href="https://www.python.org/" target="_blank">Python</a> for the <a href="https://www.epilogue.co/product/gb-operator" target="_blank">GB Operator.</h4>

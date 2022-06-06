@@ -12,4 +12,9 @@
   <a href="https://github.com/GavriloviciEduard/ShinyHunter/issues">
     <img src="https://img.shields.io/github/issues/GavriloviciEduard/ShinyHunter">
   </a>
+  <a href="https://github.com/GavriloviciEduard/ShinyHunter/pulls">
+    <img src="https://img.shields.io/github/issues-pr/GavriloviciEduard/ShinyHunter">
+  </a>
+  
+
 </p>

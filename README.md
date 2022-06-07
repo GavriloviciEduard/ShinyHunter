@@ -32,5 +32,6 @@
   </a>
 </p>
 
-![shiny_stationary](https://user-images.githubusercontent.com/33176335/172333678-84e5c32c-4cdc-488a-a570-a073e677402b.png)
+https://user-images.githubusercontent.com/33176335/172438184-6e61b338-e250-4d5d-b4e5-ddcfbddd00d3.mp4
 
+![shiny_stationary](https://user-images.githubusercontent.com/33176335/172333678-84e5c32c-4cdc-488a-a570-a073e677402b.png)

@@ -31,3 +31,6 @@
     <img src="https://img.shields.io/github/license/GavriloviciEduard/ShinyHunter">
   </a>
 </p>
+
+![shiny_stationary](https://user-images.githubusercontent.com/33176335/172333678-84e5c32c-4cdc-488a-a570-a073e677402b.png)
+

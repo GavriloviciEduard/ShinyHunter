@@ -84,3 +84,9 @@ See the [open issues](https://github.com/GavriloviciEduard/ShinyHunter/issues) f
 Your contributions are always welcome! Please have a look at the [contribution guidelines](CONTRIBUTING.md) first.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## License
+
+Distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+

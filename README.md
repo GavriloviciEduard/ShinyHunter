@@ -71,6 +71,9 @@ $ python -m poetry run python .\src\main.py --hunter stationary
 > **Note**
 > For the application to work the [GB Operator software](https://www.epilogue.co/downloads) must be up and running.
 
+> **Note**
+> To stop the app at any time just press the Q key.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Roadmap

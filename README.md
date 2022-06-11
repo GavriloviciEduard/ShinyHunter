@@ -78,3 +78,9 @@ $ python -m poetry run python .\src\main.py --hunter stationary
 See the [open issues](https://github.com/GavriloviciEduard/ShinyHunter/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contributing
+
+Your contributions are always welcome! Please have a look at the [contribution guidelines](CONTRIBUTING.md) first.
+<p align="right">(<a href="#top">back to top</a>)</p>
+

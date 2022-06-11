@@ -1,3 +1,4 @@
+<div id="top"></div>
 <h1 align="center">
   <br>
   <img src="https://user-images.githubusercontent.com/33176335/172248742-ff2efa36-03ce-4220-aeff-55c7c06d3e01.png" width="200">
@@ -66,4 +67,14 @@ $ python -m poetry run python .\src\main.py --hunter stationary
 > **Note**
 > For the application to work the [GB Operator software](https://www.epilogue.co/downloads) must be up and running.
 
-<p align="right">(<a href="#---------shiny-hunter---">back to top</a>)</p>
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Roadmap
+
+- [x] Implement stationary shiny hunter
+- [ ] Implement starter shiny hunter 
+- [ ] Implement wild shiny hunter
+
+See the [open issues](https://github.com/GavriloviciEduard/ShinyHunter/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>

@@ -32,6 +32,10 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="#how-to-use">How To Use</a>
+</p>
+
 ![epilogue_leaf_green](https://user-images.githubusercontent.com/33176335/172442175-d3ba9354-8c74-4071-b51f-5d67045894b6.JPG)
 
 https://user-images.githubusercontent.com/33176335/172438184-6e61b338-e250-4d5d-b4e5-ddcfbddd00d3.mp4
@@ -61,3 +65,5 @@ $ python -m poetry run python .\src\main.py --hunter stationary
 
 > **Note**
 > For the application to work the [GB Operator software](https://www.epilogue.co/downloads) must be up and running.
+
+<p align="right">(<a href="#---------shiny-hunter---">back to top</a>)</p>

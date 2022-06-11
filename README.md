@@ -34,7 +34,11 @@
 </p>
 
 <p align="center">
-  <a href="#how-to-use">How To Use</a>
+  <a href="#how-to-use">How To Use</a> •
+  <a href="#roadmap">Roadmap</a> •
+  <a href="#contributing">Contributing</a> •
+  <a href="#license">License</a> •
+  <a href="#acknowledgments">Acknowledgments</a>
 </p>
 
 ![epilogue_leaf_green](https://user-images.githubusercontent.com/33176335/172442175-d3ba9354-8c74-4071-b51f-5d67045894b6.JPG)
@@ -89,4 +93,16 @@ Your contributions are always welcome! Please have a look at the [contribution g
 Distributed under the MIT License. See the [LICENSE](LICENSE) file for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Acknowledgments
+
+* [Game Freak](https://www.gamefreak.co.jp/)
+* [Nintendo](https://www.nintendo.com/)
+* [Pokémon](https://www.pokemon.com/us/)
+* [Epilogue](https://www.epilogue.co/)
+* [Python](https://www.python.org/)
+* [Poetry](https://python-poetry.org/)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 

@@ -37,3 +37,25 @@
 https://user-images.githubusercontent.com/33176335/172438184-6e61b338-e250-4d5d-b4e5-ddcfbddd00d3.mp4
 
 ![shiny_stationary](https://user-images.githubusercontent.com/33176335/172333678-84e5c32c-4cdc-488a-a570-a073e677402b.png)
+
+## How To Use
+
+To clone and run this application, you'll need [Git](https://git-scm.com/downloads), [Python 3.10+](https://www.python.org/downloads/) and [Poetry](https://python-poetry.org/docs/#installing-with-pip) installed on your computer. From your command line:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/GavriloviciEduard/ShinyHunter
+
+# Go into the repository
+$ cd ShinyHunter
+
+# Install dependencies
+$ python -m poetry install
+
+# See available hunters
+$ python -m poetry run python .\src\main.py --help
+
+# Run the app
+$ python -m poetry run python .\src\main.py --hunter stationary
+```
+

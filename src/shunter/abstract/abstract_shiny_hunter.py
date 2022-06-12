@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 from datetime import datetime
 
 from pynput import keyboard
+
 from utils.color_picker import ColorPicker
 from utils.keyboard_simulator import KeyboardSimulator
 

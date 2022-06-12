@@ -1,6 +1,9 @@
 [tool.black]
 line-length = 120
 
+[tool.isort]
+profile = "black"
+
 [tool.poetry]
 name = "shiny-hunter"
 version = "0.0.1"
@@ -9,14 +12,15 @@ authors = ["Gavrilovici Eduard <eddiegavrilovici@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pywin32 = "*"
-pynput = "*"
-pywinauto = "*"
-mss = "*"
+pywin32 = "^304"
+pynput = "^1.7.6"
+pywinauto = "^0.6.8"
+mss = "^6.1.0"
 
 [tool.poetry.dev-dependencies]
-black = "*"
-flake8 = "*"
+black = "^22.3.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

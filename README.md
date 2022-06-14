@@ -84,6 +84,9 @@ $ python -m poetry run python .\src\main.py --hunter stationary
 - [x] Implement stationary shiny hunter
 - [ ] Implement starter shiny hunter 
 - [ ] Implement wild shiny hunter
+- [x] Compatible with Windows
+- [ ] Compatible with Linux
+- [ ] Compatible with MacOS
 
 See the [open issues](https://github.com/GavriloviciEduard/ShinyHunter/issues) for a full list of proposed features (and known issues).
 

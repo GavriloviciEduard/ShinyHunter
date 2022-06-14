@@ -10,16 +10,17 @@ python -m poetry run isort .\src\ --diff
 python -m poetry run flake8 .\src\ --statistics
 ```
 
-## Adding new dependencies 
+## Adding new dependencies
 
 To add new dependencies to the project, please check the <a href="https://python-poetry.org/docs/basic-usage/" target="_blank">Poetry documentation</a>.
 
-## Utilities 
+## Utilities
 
-All utils cand be found in the [`utils`](src/utils) directory. Here you can contribute by improving or implementing stuff regarding:
-  - [`Keyboard interaction with the GB Operator software`](src/utils/keyboard_simulator.py)
-  - [`Retrieving image data from the GB Operator software`](src/utils/window_capture.py)
-  - Whatever you can think of 
+All utils can be found in the [`utils`](src/utils) directory. Here you can contribute by improving or implementing stuff regarding:
+
+-   [`Keyboard interaction with the GB Operator software`](src/utils/keyboard_simulator.py)
+-   [`Retrieving image data from the GB Operator software`](src/utils/window_capture.py)
+-   Whatever you can think of
 
 ## Shiny hunters
 
@@ -41,4 +42,3 @@ def main():
         shiny_hunter = NewShinyHunter()
     shiny_hunter.start_loop()
 ```
-

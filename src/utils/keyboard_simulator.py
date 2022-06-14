@@ -16,7 +16,7 @@ class KeyboardSimulator:
             self.keys_config.a,
         ]
 
-    def press_key(self, keys: list[str]):
+    def _press_key(self, keys: list[str]) -> None:
         """Press a list of keys.
 
         Args:
@@ -26,16 +26,16 @@ class KeyboardSimulator:
         self.keyboard.window().type_keys("".join(keys))
         time.sleep(0.1)
 
-    def press_continue(self):
+    def press_continue(self) -> None:
         """Press the continue button."""
 
-        self.press_key([f"{{{self.keys_config.a} down}}"])
-        self.press_key([f"{{{self.keys_config.a} up}}"])
+        self._press_key([f"{{{self.keys_config.a} down}}"])
+        self._press_key([f"{{{self.keys_config.a} up}}"])
 
-    def press_reset(self):
+    def press_reset(self) -> None:
         """Press the key combination for reset."""
 
         for key in self.reset_key_combination:
-            self.press_key([f"{{{key} down}}"])
+            self._press_key([f"{{{key} down}}"])
         for key in self.reset_key_combination:
-            self.press_key([f"{{{key} up}}"])
+            self._press_key([f"{{{key} up}}"])

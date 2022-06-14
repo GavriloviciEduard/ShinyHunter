@@ -6,16 +6,16 @@ from utils.color_point import ColorPoint
 from utils.window_capture import WindowCapture
 
 
-class ColorPicker:
+class ColorPointPicker:
     def __init__(self, window_title: str):
         self.window_capture = WindowCapture(window_title)
-        self.mouse_listener = mouse.Listener(on_click=self.on_click)
+        self.mouse_listener = mouse.Listener(on_click=self._on_click)
         self.mouse_listener.start()
         self.clicked = False
         self.current_x = -1
         self.current_y = -1
 
-    def on_click(self, x: int, y: int, button, pressed: bool):
+    def _on_click(self, x: int, y: int, button, pressed: bool) -> None:
         """Mouse click listener.
 
         Args:

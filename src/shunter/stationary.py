@@ -19,7 +19,7 @@ class ShinyHunterStationary(AbstractShinyHunter):
         """Check if target point and reference point are picked.
 
         Returns:
-            bool: True if both points are picked, fasle otherwise.
+            bool: True if both points are picked, false otherwise.
         """
 
         return self.reference_cp and self.target_cp
@@ -46,7 +46,7 @@ class ShinyHunterStationary(AbstractShinyHunter):
 
         return self.target_cp.color != self.picker.window_capture.get_pixel(*self.target_cp.point)
 
-    def _pick_color_points(self):
+    def _pick_color_points(self) -> None:
         """Pick target color point first and then the reference color point."""
 
         if not self.reference_cp:
@@ -58,7 +58,7 @@ class ShinyHunterStationary(AbstractShinyHunter):
             print("Picking target color and position...")
             self.target_cp = self.picker.pick_color()
 
-    def _pick_color_points_loop(self):
+    def _pick_color_points_loop(self) -> None:
         """Loop for picking needed color points (target and reference)."""
 
         print_flag = True
@@ -73,7 +73,7 @@ class ShinyHunterStationary(AbstractShinyHunter):
                 print_flag = True
         self.picker.mouse_listener.stop()
 
-    def _find_shiny_loop(self):
+    def _find_shiny_loop(self) -> None:
         """Loop for finding a shiny."""
 
         os.system("cls")
@@ -84,6 +84,6 @@ class ShinyHunterStationary(AbstractShinyHunter):
             self.shiny_found = self._check_shiny()
             if not self.shiny_found:
                 self.soft_resets += 1
-                self.display_current_status()
+                self._display_current_status()
         if not self.stop:
             print(f"Shiny found after {self.soft_resets} soft resets!")

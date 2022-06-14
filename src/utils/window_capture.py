@@ -13,7 +13,7 @@ class WindowCapture:
         if not self.hwnd:
             raise Exception(f"{window_title} not running")
 
-    def focus_window(self):
+    def focus_window(self) -> None:
         """Make sure the window if visible and focused."""
 
         shell = win32com.client.Dispatch("WScript.Shell")
@@ -44,7 +44,7 @@ class WindowCapture:
             window_title (str): Given window title.
         """
 
-        def _window_callback(hwnd, all_windows):
+        def _window_callback(hwnd, all_windows) -> None:
             all_windows.append((hwnd, win32gui.GetWindowText(hwnd)))
 
         windows = []

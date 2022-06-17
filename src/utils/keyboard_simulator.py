@@ -32,6 +32,12 @@ class KeyboardSimulator:
         self._press_key([f"{{{self.keys_config.a} down}}"])
         self._press_key([f"{{{self.keys_config.a} up}}"])
 
+    def press_alternate_continue(self) -> None:
+        """Press the continue button."""
+
+        self._press_key([f"{{{self.keys_config.b} down}}"])
+        self._press_key([f"{{{self.keys_config.b} up}}"])
+
     def press_reset(self) -> None:
         """Press the key combination for reset."""
 
@@ -39,3 +45,20 @@ class KeyboardSimulator:
             self._press_key([f"{{{key} down}}"])
         for key in self.reset_key_combination:
             self._press_key([f"{{{key} up}}"])
+
+    def press_run(self) -> None:
+        """Press the run button."""
+
+        self._press_key([f"{{{self.keys_config.left} down}}"])
+        self._press_key([f"{{{self.keys_config.left} up}}"])
+        self._press_key([f"{{{self.keys_config.down} down}}"])
+        self._press_key([f"{{{self.keys_config.down} up}}"])
+        self.press_continue()
+
+    def press_move(self) -> None:
+        """Press buttons to start encounter."""
+
+        self._press_key([f"{{{self.keys_config.left} down}}"])
+        self._press_key([f"{{{self.keys_config.left} up}}"])
+        self._press_key([f"{{{self.keys_config.right} down}}"])
+        self._press_key([f"{{{self.keys_config.right} up}}"])

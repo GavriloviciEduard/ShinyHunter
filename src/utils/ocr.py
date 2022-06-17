@@ -5,11 +5,12 @@ import easyocr
 
 class OCR:
     def __init__(self):
+        print("Initializing OCR...")
         self.reader = easyocr.Reader(["en"])
         self.confidence_threshold = 0.7
 
     def get_image_text(self, image) -> list[str]:
-        """_summary_
+        """Get text from image given as input.
 
         Args:
             image: Input image where text is located.

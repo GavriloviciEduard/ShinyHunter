@@ -1,15 +1,14 @@
-from typing import Optional
+from typing import Callable, Optional
 
 from pynput import mouse
 
 from utils.color_point import ColorPoint
-from utils.window_capture import WindowCapture
 
 
 class ColorPointPicker:
-    def __init__(self, window_title: str):
-        self.window_capture = WindowCapture(window_title)
+    def __init__(self, get_pixel: Callable):
         self.mouse_listener = mouse.Listener(on_click=self._on_click)
+        self.get_pixel = get_pixel
         self.mouse_listener.start()
         self.clicked = False
         self.current_x = -1
@@ -36,7 +35,7 @@ class ColorPointPicker:
             Optional[ColorPoint]: Picked ColorPoint if selected, None otherwise.
         """
 
-        pixel = self.window_capture.get_pixel(self.current_x, self.current_y)
+        pixel = self.get_pixel(self.current_x, self.current_y)
         answer = input(f"Save this color{str(pixel)} and position{self.current_x, self.current_y}? ([Y]es/[N]o): ")
         if answer.lower() in ["y", "yes"]:
             return ColorPoint(pixel, (self.current_x, self.current_y))

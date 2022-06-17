@@ -10,12 +10,14 @@ from utils.ocr import OCR
 
 
 class WindowCapture:
-    def __init__(self, window_title: str):
-        self.hwnd = self.get_hwnd_from_title(window_title)
+    def __init__(self, window_title: str, ocr_on: bool):
+        self.ocr = None
         self.sct = mss.mss()
-        self.ocr = OCR()
+        self.hwnd = self.get_hwnd_from_title(window_title)
         if not self.hwnd:
             raise Exception(f"{window_title} not running")
+        if ocr_on:
+            self.ocr = OCR()
 
     def focus_window(self) -> None:
         """Make sure the window if visible and focused."""
@@ -69,7 +71,8 @@ class WindowCapture:
         Args:
             target (str): Text to check for.
         """
-
+        if not self.ocr:
+            raise Exception("OCR is not enabled")
         self.focus_window()
         rect = self.get_window_rect()
         win_box = {

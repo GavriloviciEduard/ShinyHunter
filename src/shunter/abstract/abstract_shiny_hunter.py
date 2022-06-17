@@ -6,15 +6,17 @@ from pynput import keyboard
 
 from utils.color_point_picker import ColorPointPicker
 from utils.keyboard_simulator import KeyboardSimulator
+from utils.window_capture import WindowCapture
 
 
 class AbstractShinyHunter(ABC):
-    def __init__(self, window_title: str = "epilogue"):
+    def __init__(self, window_title: str = "epilogue", ocr_on: bool = False):
         self.soft_resets = 0
         self.stop = False
         self.shiny_found = False
         self.start_time = datetime.now()
-        self.picker = ColorPointPicker(window_title)
+        self.window_capture = WindowCapture(window_title, ocr_on)
+        self.picker = ColorPointPicker(self.window_capture.get_pixel)
         self.key_sim = KeyboardSimulator(self.picker.window_capture.hwnd)
         self.listener = keyboard.Listener(on_press=self._on_exit)
         self.listener.start()

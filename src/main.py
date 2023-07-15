@@ -1,7 +1,9 @@
 import argparse
 
 from shunter.models.shiny_hunter import ShinyHunterType
+from shunter.starter import ShinyHunterStarter
 from shunter.stationary import ShinyHunterStationary
+from shunter.wild import ShinyHunterWild
 
 
 def parse_hunter_type() -> ShinyHunterType:
@@ -29,6 +31,10 @@ def main():
     hunter_type = parse_hunter_type()
     if hunter_type == ShinyHunterType.stationary:
         shiny_hunter = ShinyHunterStationary()
+    elif hunter_type == ShinyHunterType.wild:
+        shiny_hunter = ShinyHunterWild()
+    elif hunter_type == ShinyHunterType.starter:
+        shiny_hunter = ShinyHunterStarter()
     shiny_hunter.start_loop()
 
 

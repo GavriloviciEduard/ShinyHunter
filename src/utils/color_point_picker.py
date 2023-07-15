@@ -9,7 +9,6 @@ class ColorPointPicker:
     def __init__(self, get_pixel: Callable):
         self.mouse_listener = mouse.Listener(on_click=self._on_click)
         self.get_pixel = get_pixel
-        self.mouse_listener.start()
         self.clicked = False
         self.current_x = -1
         self.current_y = -1

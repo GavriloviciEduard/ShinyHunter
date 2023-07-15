@@ -1,4 +1,5 @@
 import contextlib
+import os
 from abc import ABC, abstractmethod
 from datetime import datetime
 
@@ -10,31 +11,45 @@ from utils.window_capture import WindowCapture
 
 
 class AbstractShinyHunter(ABC):
-    def __init__(self, window_title: str = "epilogue", ocr_on: bool = False):
+    def __init__(self, window_title: str = "operator", ocr_on: bool = False):
         self.soft_resets = 0
         self.stop = False
         self.shiny_found = False
+        self.target_cp = None
         self.start_time = datetime.now()
         self.window_capture = WindowCapture(window_title, ocr_on)
         self.picker = ColorPointPicker(self.window_capture.get_pixel)
-        self.key_sim = KeyboardSimulator(self.picker.window_capture.hwnd)
+        self.key_sim = KeyboardSimulator(self.window_capture.hwnd)
         self.listener = keyboard.Listener(on_press=self._on_exit)
         self.listener.start()
 
     @abstractmethod
-    def _check_shiny(self) -> bool:
-        """Check if shiny was found. Abstract method."""
+    def start_loop(self) -> None:
+        """Start the loop of the hunter. Abstract method."""
         raise NotImplementedError
 
     @abstractmethod
-    def start_loop(self):
-        """Start the loop of the hunter. Abstract method."""
+    def _find_shiny_loop(self) -> None:
+        # todo: doc
         raise NotImplementedError
+
+    def _check_shiny(self) -> bool:
+        """Compare the target color with the current color of the target point.
+        If the color at the same position has changed, we have found a shiny.
+
+        Returns:
+            bool: True if shiny found, false otherwise.
+        """
+        print("Target color point", self.target_cp)
+        pixel = self.window_capture.get_pixel(*self.target_cp.point)
+        print("Current pixel", pixel)
+        return self.target_cp.color != pixel
 
     def _display_current_status(self):
         """Display the current status of the hunter.
         Status: the time since the hunter started, the number of soft resets."""
 
+        os.system("cls")
         dif = datetime.now() - self.start_time
         time = divmod(dif.total_seconds(), 60)
         mins, secs = int(time[0]), round(time[1], 2)
@@ -48,6 +63,7 @@ class AbstractShinyHunter(ABC):
             key (pynput.backend.Key): Keyboard key pressed.
         """
 
+        # todo: fix not working while entering data
         with contextlib.suppress(AttributeError):
             if key.char == "q":
                 print("Exiting...")

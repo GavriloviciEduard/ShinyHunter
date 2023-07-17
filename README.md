@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/github/contributors/GavriloviciEduard/ShinyHunter">
   </a>
   <a href="https://github.com/GavriloviciEduard/ShinyHunter/actions">
-    <img src="https://img.shields.io/github/workflow/status/GavriloviciEduard/ShinyHunter/Python%20linting?label=lint">
+    <img src="https://img.shields.io/github/actions/workflow/status/GavriloviciEduard/ShinyHunter/.github/workflows/lint.yml?branch=master&label=lint">
   </a>
   <a href="https://github.com/GavriloviciEduard/ShinyHunter/issues">
     <img src="https://img.shields.io/github/issues/GavriloviciEduard/ShinyHunter">

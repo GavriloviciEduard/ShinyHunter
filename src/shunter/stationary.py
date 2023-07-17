@@ -4,7 +4,7 @@ from shunter.abstract.abstract_shiny_hunter import AbstractShinyHunter
 
 
 class ShinyHunterStationary(AbstractShinyHunter):
-    def __init__(self, window_title: str = "epilogue"):
+    def __init__(self, window_title: str):
         AbstractShinyHunter.__init__(self, window_title)
         self.reference_cp = None
         self.target_cp = None

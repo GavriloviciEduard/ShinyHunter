@@ -28,7 +28,7 @@ def main():
     shiny_hunter = None
     hunter_type = parse_hunter_type()
     if hunter_type == ShinyHunterType.stationary:
-        shiny_hunter = ShinyHunterStationary()
+        shiny_hunter = ShinyHunterStationary(window_title="operator")
     shiny_hunter.start_loop()
 
 

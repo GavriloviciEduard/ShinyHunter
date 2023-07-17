@@ -32,12 +32,12 @@ class WindowCapture:
             tuple[int, int, int]: The pixel value as (R, G, B).
         """
 
-        self.focus_window()
+        # self.focus_window()
         pixel_box = {"top": screen_y, "left": screen_x, "width": 1, "height": 1}
         return self.sct.grab(pixel_box).pixel(0, 0)
 
     @staticmethod
-    def get_hwnd_from_title(window_title: str) -> Optional[int]:
+    def get_hwnd_from_title(window_title: str, all: bool = False) -> Optional[int]:
         """Get window handle from a given title.
 
         Args:
@@ -50,4 +50,4 @@ class WindowCapture:
         windows = []
         win32gui.EnumWindows(_window_callback, windows)
         hwnds = [hwnd for hwnd, title in windows if window_title.lower() in title.lower()]
-        return hwnds[0] if len(hwnds) else None
+        return hwnds if all else (hwnds[0] if len(hwnds) else None)

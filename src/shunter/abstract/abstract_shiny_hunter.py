@@ -9,13 +9,13 @@ from utils.keyboard_simulator import KeyboardSimulator
 
 
 class AbstractShinyHunter(ABC):
-    def __init__(self, window_title: str = "epilogue"):
+    def __init__(self, window_title: str):
         self.soft_resets = 0
         self.stop = False
         self.shiny_found = False
         self.start_time = datetime.now()
         self.picker = ColorPointPicker(window_title)
-        self.key_sim = KeyboardSimulator(self.picker.window_capture.hwnd)
+        self.key_sim = KeyboardSimulator(self.picker.window_capture.get_hwnd_from_title(window_title, True))
         self.listener = keyboard.Listener(on_press=self._on_exit)
         self.listener.start()
 

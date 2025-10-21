@@ -2,6 +2,8 @@
 
 **Continuation from Part 2**
 
+📖 **Previous: [FINAL_ARCHITECTURE_GUIDE_PART2.md](./FINAL_ARCHITECTURE_GUIDE_PART2.md)** | **Start: [FINAL_ARCHITECTURE_GUIDE.md](./FINAL_ARCHITECTURE_GUIDE.md)**
+
 ---
 
 ## 10. State Machine Implementation
